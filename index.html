@@ -26,6 +26,30 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+
+<style>
+  /* Make every portfolio image the same shape and prevent overflow */
+  .portfolio-card .image-container{
+    position: relative;
+    aspect-ratio: 4 / 3;      /* pick 16/9, 4/3, or 1/1 */
+    overflow: hidden;
+  }
+  .portfolio-card .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* fills the box, crops edges */
+    object-position: center;   /* keeps center visible */
+    display: block;
+  }
+
+  /* Optional: tidy spacing so tall captions don't push cards weirdly */
+  .portfolio-card .content{ padding-top: .75rem; }
+</style>
+
+
+
 </head>
 
 <body class="index-page">
@@ -569,181 +593,7 @@
 </section><!-- /Services Section -->
 
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="testimonial-slider swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 4000
-              },
-              "slidesPerView": 1,
-              "spaceBetween": 30,
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "breakpoints": {
-                "768": {
-                  "slidesPerView": 2
-                },
-                "1200": {
-                  "slidesPerView": 3
-                }
-              }
-            }
-          </script>
-
-          <div class="swiper-wrapper">
-
-            <!-- Testimonial Slide 1 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="200">
-                <div class="testimonial-header">
-                  <img src="assets/img/person/person-f-12.webp" alt="Client" class="img-fluid" loading="lazy">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-                <div class="testimonial-body">
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit sed eiusmod tempor.</p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>Jessica Martinez</h5>
-                  <span>UX Designer</span>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-            <!-- Testimonial Slide 2 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
-                <div class="testimonial-header">
-                  <img src="assets/img/person/person-m-8.webp" alt="Client" class="img-fluid" loading="lazy">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-                <div class="testimonial-body">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>David Rodriguez</h5>
-                  <span>Software Engineer</span>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-            <!-- Testimonial Slide 3 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
-                <div class="testimonial-header">
-                  <img src="assets/img/person/person-f-6.webp" alt="Client" class="img-fluid" loading="lazy">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-                <div class="testimonial-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.</p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>Amanda Wilson</h5>
-                  <span>Creative Director</span>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-            <!-- Testimonial Slide 4 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="500">
-                <div class="testimonial-header">
-                  <img src="assets/img/person/person-m-12.webp" alt="Client" class="img-fluid" loading="lazy">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-                <div class="testimonial-body">
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis.</p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>Ryan Thompson</h5>
-                  <span>Business Analyst</span>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-            <!-- Testimonial Slide 5 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="600">
-                <div class="testimonial-header">
-                  <img src="assets/img/person/person-f-10.webp" alt="Client" class="img-fluid" loading="lazy">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-                <div class="testimonial-body">
-                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>Rachel Chen</h5>
-                  <span>Project Manager</span>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-          </div>
-
-          <div class="swiper-navigation">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
+    
 <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio section">
 
@@ -773,10 +623,10 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-residential">
           <div class="portfolio-card">
             <div class="image-container">
-              <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="Custom home construction exterior" loading="lazy">
+              <img src="assets/img/construction/construction-crew-poses-stockcake.jpg" alt="Custom home construction exterior" loading="lazy">
               <div class="overlay">
                 <div class="overlay-content">
-                  <a href="assets/img/construction/portfolio-custom-home.webp" class="glightbox zoom-link" title="Custom Home Build">
+                  <a href="assets/img/construction/construction-crew-poses-stockcake.jpg" class="glightbox zoom-link" title="Custom Home Build">
                     <i class="bi bi-zoom-in"></i>
                   </a>
                   <a href="portfolio-details.html" class="details-link" title="View Project Details">
@@ -796,7 +646,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-commercial">
           <div class="portfolio-card">
             <div class="image-container">
-              <img src="assets/img/construction/portfolio-retail-fitout.webp" class="img-fluid" alt="Retail store interior fit-out" loading="lazy">
+              <img src="assets/img/construction/portfolio-retail-fitout.webp" alt="Retail store interior fit-out" loading="lazy">
               <div class="overlay">
                 <div class="overlay-content">
                   <a href="assets/img/construction/portfolio-retail-fitout.webp" class="glightbox zoom-link" title="Retail Fit-Out">
@@ -819,7 +669,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-renovation">
           <div class="portfolio-card">
             <div class="image-container">
-              <img src="assets/img/construction/portfolio-kitchen-remodel.webp" class="img-fluid" alt="Kitchen renovation with new cabinetry and lighting" loading="lazy">
+              <img src="assets/img/construction/portfolio-kitchen-remodel.webp" alt="Kitchen renovation with new cabinetry and lighting" loading="lazy">
               <div class="overlay">
                 <div class="overlay-content">
                   <a href="assets/img/construction/portfolio-kitchen-remodel.webp" class="glightbox zoom-link" title="Kitchen & Living Remodel">
@@ -842,7 +692,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infrastructure">
           <div class="portfolio-card">
             <div class="image-container">
-              <img src="assets/img/construction/portfolio-concrete-paving.webp" class="img-fluid" alt="Concrete paving and site work" loading="lazy">
+              <img src="assets/img/construction/portfolio-concrete-paving.webp" alt="Concrete paving and site work" loading="lazy">
               <div class="overlay">
                 <div class="overlay-content">
                   <a href="assets/img/construction/portfolio-concrete-paving.webp" class="glightbox zoom-link" title="Concrete & Paving Works">
@@ -865,7 +715,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-residential">
           <div class="portfolio-card">
             <div class="image-container">
-              <img src="assets/img/construction/portfolio-home-addition.webp" class="img-fluid" alt="Home addition framing and exterior" loading="lazy">
+              <img src="assets/img/construction/portfolio-home-addition.webp" alt="Home addition framing and exterior" loading="lazy">
               <div class="overlay">
                 <div class="overlay-content">
                   <a href="assets/img/construction/portfolio-home-addition.webp" class="glightbox zoom-link" title="Home Addition">
@@ -888,7 +738,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-commercial">
           <div class="portfolio-card">
             <div class="image-container">
-              <img src="assets/img/construction/portfolio-office-buildout.webp" class="img-fluid" alt="Modern office build-out interior" loading="lazy">
+              <img src="assets/img/construction/portfolio-office-buildout.webp" alt="Modern office build-out interior" loading="lazy">
               <div class="overlay">
                 <div class="overlay-content">
                   <a href="assets/img/construction/portfolio-office-buildout.webp" class="glightbox zoom-link" title="Office Build-Out">
@@ -911,7 +761,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-renovation">
           <div class="portfolio-card">
             <div class="image-container">
-              <img src="assets/img/construction/portfolio-exterior-refresh.webp" class="img-fluid" alt="Exterior siding and facade renovation" loading="lazy">
+              <img src="assets/img/construction/portfolio-exterior-refresh.webp" alt="Exterior siding and facade renovation" loading="lazy">
               <div class="overlay">
                 <div class="overlay-content">
                   <a href="assets/img/construction/portfolio-exterior-refresh.webp" class="glightbox zoom-link" title="Exterior Refresh">
@@ -934,7 +784,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infrastructure">
           <div class="portfolio-card">
             <div class="image-container">
-              <img src="assets/img/construction/portfolio-roofing-solar.webp" class="img-fluid" alt="Roofing installation prepared for solar" loading="lazy">
+              <img src="assets/img/construction/portfolio-roofing-solar.webp" alt="Roofing installation prepared for solar" loading="lazy">
               <div class="overlay">
                 <div class="overlay-content">
                   <a href="assets/img/construction/portfolio-roofing-solar.webp" class="glightbox zoom-link" title="Roofing & Solar Prep">
@@ -1420,23 +1270,21 @@
   <script src="assets/js/main.js"></script>
 
 
-<!-- GLightbox CSS -->
-<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+
+
+<!-- Dependencies (if not already included by your template) -->
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
 <!-- GLightbox JS -->
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-<script>
-  // Initialize GLightbox for portfolio images
-  const lightbox = GLightbox({
-    selector: '.glightbox',
-    touchNavigation: true,
-    loop: true,
-    zoomable: true,
-  });
-</script>
 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script> GLightbox({ selector: '.glightbox' }); </script>
 
 
 
